@@ -1,0 +1,43 @@
+Risk Level Assessment of Cardiovascular Health Problems
+========================================================
+author: Data Products Assignment
+date: `r date()`
+
+Waist-Hip Ratio (WHR)
+========================================================
+
+A waist-hip measurement is the ratio of the circumference of your waist to that of your hips. You measure the smallest circumference of your waist, usually just above your belly button, and divide that total by the circumference of your hip at its widest part.
+
+Measurement Parameter
+- Less than 0.9 - low risk of cardiovascular health problems
+- 0.9 to 0.99 - moderate risk of cardiovascular health problems
+- 1 or over - high risk of cardiovascular problems
+
+How is it calculated
+========================================================
+For assessment of the risk level, the ratio of waist size to hip size is calculated. For this, both are measured in inches.
+```{r, }
+waist = 28
+hip = 34
+Waist_Hip_Ratio <- waist/hip
+Waist_Hip_Ratio
+```
+
+Risk Level Assessment
+========================================================
+The function used for assessment of the risk level is shown below:
+```{r, }
+diagnostic_f<-function(waist,hip){
+  Risk_value<-waist/hip
+  ifelse(Risk_value<0.9,"LOW",
+         ifelse(Risk_value<0.99,"MODERATE","HIGH"))
+}
+```
+For example, with waist = 28 inches and hip = 34 inches, the Risk Level comes to
+```{r}
+diagnostic_f(28,34)
+```
+
+Advantage of Waist-Hip Ratio (WHR)
+========================================================
+The WHR of a person is a much better indicator of whether their body weight is ideal and what their risks of developing serious health conditions are, compared to BMI. Various studies have shown that people with apple-shaped bodies - who have larger WHRs - have higher health risks compared to people with pear-shaped bodies - who have lower WHRs.
