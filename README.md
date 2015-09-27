@@ -4,3 +4,6 @@ This is the repository where Developing Data Products Project assignment is loca
 ui.R
 server.R
 The application is accesible in: https://prasanta.shinyapps.io/WHApp
+
+A presentation of the application has been designed using R presenter and published into Rpubs. The presentation could be visualized in:
+http://rpubs.com/prasantasil/114001
